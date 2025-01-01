@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration_Form</title>
+    <link rel="icon" type="image/png" href="http://localhost/my_project/1image/l2.png">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('http://localhost/my_project/1image/bg-img.jpg') no-repeat center center fixed;
+        background-size: cover;
+        animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    form {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    h2:hover {
+        color: rgb(85, 85, 124);
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 94%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    input[type="submit"]:hover {
+        background-color: #4cae4c;
+    }
+    .login-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .login-button {
+        width: 100%;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .login-button:hover {
+        background-color: #0056b3;
+    }
+    p {
+        color: #555;
+        text-align: center;
+        font-weight: bold;   
+    }
+</style>
+<body>
+    <form method="POST" action="http://localhost/my_project/files/register.php">
+        <h2>Registration Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required autocomplete="off">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required autocomplete="off">
+        <br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required autocomplete="off">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required autocomplete="off">
+        <br>
+        
+        <input type="submit" value="Register">
+        <div class="login-link">
+            <p>Already have an account?</p>
+            <button class="login-button" onclick="window.location.href='http://localhost/my_project/files/login.html'">Log In</button>
+        </div>
+    </form>
+</body>
+</html>

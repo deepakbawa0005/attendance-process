@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #272424;
+    margin: 0;
+    padding: 20px;
+}
+.navbar-brand{
+    cursor: pointer;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+.navbar h3 {
+    flex-grow: 1; 
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.navbar h3:hover{
+    color: #4CAF50;
+}
+button {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.button-present {
+    background-color: #4CAF50;
+    color: white;
+}
+.button-absent {
+    background-color: #f44336; 
+    color: white;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.alert {
+    color: red;
+    font-weight: bold;
+}
+#editDropdown {
+    width: 150px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #1d1c1c7a;  
+    font-size: 14px; 
+    color: #FFF; 
+    cursor: pointer;  
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+#editDropdown option {
+    padding: 10px;  
+}
+#editDropdown:hover {
+    border-color: #888; 
+}
+#editDropdown:focus {
+    outline: none; 
+    border-color: #007BFF;  
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+#editPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;  
+}
+.add-student-container {
+    max-width: 400px;  
+    margin: 20px auto; 
+    padding: 15px;  
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+.add-student-title {
+    text-align: center; 
+    margin-bottom: 15px; 
+    font-size: 20px; 
+    color: #343a40; 
+}
+.input-field {
+    margin-bottom: 10px; 
+}
+.label {
+    display: block; 
+    margin-bottom: 3px; 
+    font-weight: bold; 
+}
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ced4da; 
+    border-radius: 4px; 
+    font-size: 14px; 
+    margin-bottom: 10px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #080808;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;;
+}
+
+.submit-button {
+    width: 100%; 
+    padding: 8px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 14px; 
+    cursor: pointer; 
+}
+.submit-button:hover {
+    background-color: #0056b3; 
+}
+.error-message {
+    color: red; 
+    font-size: 12px; 
+    margin-top: 5px; 
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome message styling */
+#welcome-message {
+    animation: fadeInSlide 0.5s ease forwards;
+    font-size: 1.5em; 
+    margin-top: 10px; 
+    color: #141618;
+    display: inline-block;
+}
+.custom-dropdown {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+}
+
+.dropdown-selected {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}

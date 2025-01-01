@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Marking System</title>
+    <link rel="icon" type="image/jpg" href="http://localhost/my_project/1image/l5.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.11/jspdf.plugin.autotable.min.js"></script>
+
+    <link rel="stylesheet" href="../files/attendance.css"> <!-- Link to external CSS -->
+    <script src="https://kit.fontawesome.com/c0ad99b7f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-4 text-center">
+        <div class="collapse navbar-collapse">
+            <div class="dropdown mr-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="editDropdownButton" data-toggle="dropdown" 
+                 aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i> OPTION
+                </button>
+                <div class="dropdown-menu" aria-labelledby="editDropdownButton">
+                    <a class="dropdown-item"  data-value="addStudent"><i class="fa-solid fa-user-plus"></i> Add New Student</a>
+                    <a class="dropdown-item"  data-value="editName"><i class="fa-solid fa-edit"></i> Edit name</a>
+                    <a class="dropdown-item"  data-value="deleteStudent"><i class="fa-solid fa-user-minus"></i> Delete student</a>
+                    <a class="dropdown-item"  data-value="showStudentDetail"><i class="fa-solid fa-info-circle"></i>Student Detail</a>
+                    <a class="dropdown-item"  data-value="downloadPDF"><i class="fa-solid fa-file-pdf"></i> Export to PDF</a>
+                    <a class="dropdown-item" href="#" data-value="generateAnalyticsReport"><i class="fa-solid fa-chart-line"></i> Generate Analytics Report</a>
+
+                </div>
+            </div>
+            <h3>Attendance Marking System</h3>
+            <div class="ml-auto">
+                <span class="navbar-text mr-3 text-dark font-weight-bold">Welcome, <span id="usernameDisplay"></span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-FLUID mt-4 text-center" id="inputContainer">
+        <input type="file" id="fileInput" accept=".xlsx" class="form-control mb-3" />
+        <input type="date" id="attendanceDate" class="form-control mb-3" />
+
+        <table class="table table-bordered" id="attendanceTable">
+            <thead class="thead-light">
+                <tr>
+                    <th>S.No</th>
+                    <th>UID</th>
+                    <th>NAME</th>
+                    <th>Present Classes</th>
+                    <th>Total Classes</th>
+                    <th>Attendance Percentage</th>
+                    <th>Today's Attendance</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+        <button class="btn btn-primary" onclick="exportToExcel()">SUBMIT ATTENDANCE</button>
+        <button class="btn btn-danger" onclick="window.location.href='../files/login.html'">LOG OUT</button>
+    </div>
+    <script src="../files/script.js"></script>
+</body>
+</html>
